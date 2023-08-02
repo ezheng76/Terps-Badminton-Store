@@ -12,12 +12,21 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-
-
+            margin: 0px;
+            
         }
 
         .title{
             font-size: 50px;
+        }
+
+        .social_links{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .no_underline{
+            text-decoration: none;
         }
         /* .wrap {
             overflow: hidden;
@@ -111,8 +120,6 @@
 </script>
 
 <body>
-
-
     <div class="header">
         <div class="logo">
             <img src="../images/umd_club_badminton_logo-removebg-preview.png" alt="umd_club_badminton_logo"
@@ -122,8 +129,8 @@
             Terps Badminton
         </div>
         <div class="social_links">
-            <i class="fa-brands fa-instagram"></i>
-             Facebook Webpage
+            <a class="no_underline" href="https://www.instagram.com/umdclubbadminton/" ><i class="fa-brands fa-instagram"></i> umdclubbadminton</a>
+            <a class="no_underline" href="https://www.facebook.com/umdclubbadminton/" ><i class="fa-brands fa-facebook"></i> UMD Club Badminton</a>
         </div>
     </div>
 
@@ -141,7 +148,7 @@
 
 
 
-    <h1>Welcome to Terps Badminton Gear Shop</h1>
+    
 
     <div id="jokes">
         Here's a joke to cheer you up!
