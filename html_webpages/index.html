@@ -30,19 +30,17 @@
         }
         .header {
             display: flex;
-            justify-content:space-between;
+            justify-content:space-evenly;
             align-items: center;
             margin: 5px;
+            
         }
 
         .title{
             font-size: 60px;
             text-align: center;
-        }
-
-        .social_links{
-            display: flex;
-            flex-direction: column;
+            flex-grow: 1;
+            padding-right: 130px;
         }
 
         .no_underline{
@@ -53,6 +51,7 @@
             display: flex;
             justify-content: space-around;
             padding: 40px 0px ;
+            margin-bottom: 25px;
         }
 
         .yonex_logo_image,
@@ -81,6 +80,7 @@
         .brand_introduction h1{
             text-align: center;
             color: white;
+            margin-top: 60px;
         }
         .brand_introduction h5{
             text-align: center;
@@ -96,27 +96,55 @@
         .community{
             display: flex;
             flex-direction: column;
+            margin: 40px 0px;
         }
 
         .community_content{
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            gap: 50px;
         }
 
         .community_info{
-            margin: 10px;
-        }
-        #jokes {
-            border: 1px ridge red;
-            text-align: center;
-            margin: auto;
-            width: 20%;
-            border: 3px solid red;
-            padding: 10px;
+            padding: 50px;
+            font-size: 25px;
         }
 
-        #order {
-            font-size: 40px;
+        .community_photo{
+            padding: 50px;
+        }
+
+        .discord_button{
+            border-radius: 15px;
+            font-size: 15px;
+        }
+        
+        .sec4{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .sec4 .joke_container{
+            flex: 0 0 150px;
+            color: white;
+            
+        }
+        .sec4 .joke_button{
+            text-align: center;
+            margin: 20px;
+        }
+
+        .joke_button button{
+            border-radius: 20px;
+            padding: 20px;
+            border-color: wheat;
+            border-style: solid;
+        }
+
+        .joke_container{
+            text-align: center;
+            font-size: 30px;
         }
     </style>
 </head>
@@ -135,10 +163,9 @@
     }
 
     function renderJoke(data) {
-        const setup = document.getElementById("setup");
-        const punchline = document.getElementById("punchline");
-        setup.innerHTML = data.setup;
-        punchline.innerHTML = data.punchline;
+        const joke = document.getElementById("joke");
+        joke.innerHTML = data.setup + "<br>" + data.punchline;
+    
     }
 </script>
 
@@ -151,18 +178,9 @@
                         <img src="../images/umd_club_badminton_logo-removebg-preview.png" alt="umd_club_badminton_logo"
                         height="120px" width="auto">
                     </a>
-                    
                 </div>
                 <div class="title">
                     Terps Badminton
-                </div>
-                <div class="social_links">
-                    <a class="no_underline" href="https://www.instagram.com/umdclubbadminton/" target="_blank" rel="noopener noreferrer" >
-                        <i class="fa-brands fa-instagram"></i> umdclubbadminton  
-                    </a>
-                    <a class="no_underline" href="https://www.facebook.com/umdclubbadminton/" target="_blank" rel="noopener noreferrer" >
-                        <i class="fa-brands fa-facebook"></i> UMD Club Badminton 
-                    </a>
                 </div>
             </div>
         </div>
@@ -172,7 +190,6 @@
             <div class="brand_introduction">
                 <h1>
                     Top 3 Badminton Brands
-
                 </h1>
                 <h5>
                     Click on icon to view products from each brand
@@ -221,11 +238,26 @@
         <div class="sec3">
             <div class="community">
                 <div class="join_community_title">
-                    Join the Badminton Community!
+                    <h1>
+                        Join the Badminton Community!
+                    </h1>
+                    <div class="social_links">
+                        <a class="no_underline" href="https://www.instagram.com/umdclubbadminton/" target="_blank" rel="noopener noreferrer" >
+                            <i class="fa-brands fa-instagram"></i> umdclubbadminton  
+                        </a>
+                        <a class="no_underline" href="https://www.facebook.com/umdclubbadminton/" target="_blank" rel="noopener noreferrer" >
+                            <i class="fa-brands fa-facebook"></i> UMD Club Badminton 
+                        </a>
+                        <a class="no_underline" href="https://discord.gg/drnkrtQX" target="_blank" rel="noopener noreferrer" >
+                            <i class="fa-brands fa-discord"></i> Discord 
+                        </a>
+                    </div>
                 </div>
                 <div class="community_content">
                     <div class="community_info">
-                        Welcome to the University of Maryland's Badminton Club. We're all super friendly and  welcoming to players of all levels. We also host various tournaments as well as provide a space for those who want to play badminton for fun. We provide birdies and rackets, so all you have to do is come to practice and we'll set you up with everything you need. Hope you'll give us a shot!
+                        <p>
+                            Welcome to the University of Maryland's Badminton Club. We're all super friendly and  welcoming to players of all levels. We also host various tournaments as well as provide a space for those who want to play badminton for fun. We provide birdies and rackets, so all you have to do is come to practice and we'll set you up with everything you need. Hope you'll give us a shot!
+                        </p>
                     </div>
                     <div class="community_photo">
                         <img src="../images/club_photo.jpeg" alt="">
@@ -233,27 +265,27 @@
                 </div>
             </div>
         </div>
+
+        <div class="sec4 blue-background">
+            <div class="joke_button">
+                <button type="button" onclick="buttonClick()">
+                    Give me a joke
+                </button>
+            </div>
+            <div class="joke_container">
+                <div id="joke"></div>
+            </div>
+            
+        </div>
     </div>
 
-    <div id="jokes">
-        Here's a joke to cheer you up!
-        <br>
-        (It might take a while to load)
-        <br>
-        <button id="button" type="button" onclick="buttonClick()">Get Joke</button>
-        <p id="setup"></p>
-
-        <p id="punchline"></p>
-
-    </div>
-
-    <p id="order">
+    <!-- <p id="order">
         <a href="/orderForm">Order Now</a>
     </p>
 
     <p id="remove">
         <a href="/remove">Remove All Orders</a>
-    </p>
+    </p> -->
 
 
 
