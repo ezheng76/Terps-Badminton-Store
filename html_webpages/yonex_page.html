@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yonex Products</title>
+  </head>
+  <style>
+    body {
+      padding: 0px;
+      margin: 0px;
+    }
+    .hide_scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .hide_scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .sections {
+      display: flex;
+      flex-direction: column;
+    }
+    .blue-background {
+      background-color: #1f2937;
+    }
+    .header {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 5px;
+    }
+
+    .title {
+      font-size: 60px;
+      text-align: center;
+      flex-grow: 1;
+      padding-right: 130px;
+    }
+
+    .no_underline {
+      text-decoration: none;
+    }
+
+    a {
+      color: black;
+    }
+
+    .yonex_banner {
+      background-image: url("../images/victorAx_yonex.jpeg");
+      height: 600px;
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+
+    .yonex_title {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 100px;
+    }
+
+    .dropbtn {
+      color: darkorange;
+      opacity: 0.8;
+      padding: 16px;
+      font-size: 80px;
+      border: none;
+      width: 500px;
+      height: 300px;
+
+      background-size: cover;
+      border: 3px solid #1f2937;
+    }
+
+    .dropbtn.astrox_banner {
+      background-image: url("../images/astrox_racket.webp");
+    }
+    .dropbtn.nanoflare_banner {
+      background-image: url("../images/nanoflare_racket.webp");
+    }
+    .dropbtn.duora_banner {
+      background-image: url("../images/duora_racket.webp");
+    }
+    .dropbtn.arcsaber_banner {
+      background-image: url("../images/arcsaber_racket.webp");
+    }
+
+    .dropbtn.aerus_banner {
+      background-image: url("../images/aerus_shoe.webp");
+    }
+    .dropbtn.eclipsion_banner {
+      background-image: url("../images/eclipsion_shoe.webp");
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      width: auto;
+    }
+
+    .dropdown-content img {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    
+
+    .dropdown:hover .dropdown-content {
+      display: flex;
+      background-color: white;
+      border: 3px solid wheat;
+    }
+
+    .rackets,
+    .yonex_shoes {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 50px;
+      gap: 50px;
+    }
+
+    .racket_section,
+    .shoes_section,
+    .bag_section {
+      padding: 25px;
+    }
+
+    .footer {
+      text-align: center;
+    }
+
+    #order{
+        text-align: center;
+        font-size: 20px;
+    }
+  </style>
+  <body class="hide_scrollbar">
+    <div class="sections">
+      <div class="sec1">
+        <div class="header">
+          <div class="logo">
+            <a
+              href="https://umdclubbadminton.weebly.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="../images/umd_club_badminton_logo-removebg-preview.png"
+                alt="umd_club_badminton_logo"
+                height="120px"
+                width="auto"
+              />
+            </a>
+          </div>
+          <div class="title">
+            <a class="no_underline" href="../html_webpages/index.html">
+              Terps Badminton
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec2">
+        <div class="yonex_banner">
+          <div class="yonex_title">YONEX</div>
+        </div>
+      </div>
+
+      <div class="sec3">
+        <div class="racket_section">
+          <h1>Rackets</h1>
+          <hr />
+        </div>
+
+        <div class="rackets">
+          <div class="astrox">
+            <div class="dropdown">
+              <button class="dropbtn astrox_banner">Astrox</button>
+              <div class="dropdown-content">
+                <div class="racket1">
+                    <img src="../images/ax88d_pro.webp" width="200px" height="auto">
+                    <ul>
+                        <li>
+                            Name: Astrox 88D Pro
+                        </li>
+                        <li>Flex: STIFF</li>
+                        <li>Length: 10mm longer</li>
+                        <li>Weight / Grip: <br>
+                            4U (Avg. 83g) G5, 6 <br>
+                            3U (Avg. 88g) G4, 5, 6
+                        </li>
+                        <li>Stringing Advice: <br>
+                            4U: 20 - 28 lbs <br>
+                            3U: 21 - 29 lbs
+                        </li>
+                        <li>Color(s): Camel Gold</li>
+                        <li>Made In Japan</li>
+
+                    </ul>
+                </div>
+                <div class="racket2">
+                    <img src="../images/ax88s_pro.webp" width="200px" height="auto">
+                    <ul>
+                        <li>
+                            Name: Astrox 88D Pro
+                        </li>
+                        <li>Flex: STIFF</li>
+                        <li>Length: 10mm longer</li>
+                        <li>Weight / Grip: <br>
+                            4U (Avg. 83g) G5, 6 <br>
+                            3U (Avg. 88g) G4, 5, 6
+                        </li>
+                        <li>Stringing Advice: <br>
+                            4U: 20 - 28 lbs <br>
+                            3U: 21 - 29 lbs
+                        </li>
+                        <li>Color(s): Camel Gold</li>
+                        <li>Made In Japan</li>
+                    </ul>
+                </div>
+                <div class="racket3">
+                    <img src="../images/ax77_pro.webp" width="200px" height="auto">
+                    <ul>
+                        <li>
+                            Name: Astrox 88D Pro
+                        </li>
+                    </ul>
+                </div>
+                <div class="racket4">
+                    <img src="../images/ax99_pro_whitetiger.webp" width="200px" height="auto">
+                    <ul>
+                        <li>
+                            Name: Astrox 88D Pro
+                        </li>
+                    </ul>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="nanoflare">
+            <div class="dropdown">
+              <button class="dropbtn nanoflare_banner">Nanoflare</button>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div>
+          </div>
+          <div class="duora">
+            <div class="dropdown">
+              <button class="dropbtn duora_banner">Duora</button>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div>
+          </div>
+          <div class="arcsaber">
+            <div class="dropdown">
+              <button class="dropbtn arcsaber_banner">Arcsaber</button>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec4">
+        <div class="shoes_section">
+          <h1>Shoes</h1>
+          <hr style="color: darkorange" />
+        </div>
+        <div class="yonex_shoes">
+          <div class="aerus">
+            <div class="dropdown">
+              <button class="dropbtn aerus_banner">Aerus</button>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div>
+          </div>
+          <div class="eclipsion">
+            <div class="dropdown">
+              <button class="dropbtn eclipsion_banner">Eclipsion</button>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <p id="order">
+          <a href="/orderForm">Order Now</a>
+        </p>
+      </div>
+
+      <div class="footer">
+        <div class="logo">
+          <a
+            href="https://umdclubbadminton.weebly.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="../images/umd_club_badminton_logo-removebg-preview.png"
+              alt="umd_club_badminton_logo"
+              height="90px"
+              width="auto"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
