@@ -67,66 +67,32 @@
       font-size: 100px;
     }
 
-    .dropbtn {
-      color: darkorange;
-      opacity: 0.8;
-      padding: 16px;
-      font-size: 75px;
-      border: none;
-      width: 500px;
-      height: 300px;
-
-      background-size: cover;
-      border: 3px solid #1f2937;
+    .astrox,
+    .nanoflare,
+    .duora,
+    .arcsaber{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 100px;
     }
 
-    .dropbtn.astrox_banner {
-      background-image: url("../images/astrox_racket.webp");
-    }
-    .dropbtn.nanoflare_banner {
-      background-image: url("../images/nanoflare_racket.webp");
-    }
-    .dropbtn.duora_banner {
-      background-image: url("../images/duora_racket.webp");
-    }
-    .dropbtn.arcsaber_banner {
-      background-image: url("../images/arcsaber_racket.webp");
+    .nanoflare{
+        flex: 0 0 1275px;
+        gap: 95px;
+        justify-content:flex-start;
     }
 
-    .dropbtn.aerus_banner {
-      background-image: url("../images/aerus_shoe.webp");
-    }
-    .dropbtn.eclipsion_banner {
-      background-image: url("../images/eclipsion_shoe.webp");
-    }
-
-    .dropdown {
-      position: relative;
-      display: inline-block;
+    .duora{
+        flex: 0 0 1275px;
+        gap: 120px;
+        justify-content:flex-start;
     }
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: white;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-      width: auto;
-    }
-
-    .dropdown-content img {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-
-    
-
-    .dropdown:hover .dropdown-content {
-      display: flex;
-      background-color: white;
-      border: 3px solid wheat;
+    .arcsaber{
+        flex: 0 0 1275px;
+        justify-content: flex-start;
+        gap:100px;
     }
 
     .rackets,
@@ -135,8 +101,22 @@
       justify-content: space-evenly;
       align-items: center;
       flex-wrap: wrap;
-      margin: 50px;
-      gap: 50px;
+      
+    }
+
+    .astrox88DPro,
+    .astrox88SPro,
+    .astrox77Pro,
+    .astrox99Pro,
+    .nanoflare1000z,
+    .nanoflare800,
+    .nanoflare700,
+    .duora_z_strike,
+    .arcsaber11pro,
+    .arcsaber7pro{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .racket_section,
@@ -193,141 +173,106 @@
         </div>
 
         <div class="rackets">
-          <div class="astrox">
-            <div class="dropdown">
-              <button class="dropbtn astrox_banner">Astrox</button>
-              <div class="dropdown-content">
-                <div class="racket1">
-                    <img src="../images/ax88d_pro.webp" width="200px" height="auto">
-                    <ul>
-                        <li>
-                            Name: Astrox 88D Pro
-                        </li>
-                        <li>Flex: STIFF</li>
-                        <li>Length: 10mm longer</li>
-                        <li>Weight / Grip: <br>
-                            4U (Avg. 83g) G5, 6 <br>
-                            3U (Avg. 88g) G4, 5, 6
-                        </li>
-                        <li>Stringing Advice: <br>
-                            4U: 20 - 28 lbs <br>
-                            3U: 21 - 29 lbs
-                        </li>
-                        <li>Color(s): Camel Gold</li>
-                        <li>Made In Japan</li>
 
-                    </ul>
+            <div class="astrox">
+                <h3>Astrox</h3>
+                <div class="astrox88DPro">
+                    <img src="../images/ax88d_pro.webp" width="200px" height="300px">
+                    <h3>Astrox 88D Pro</h3>
+                    <h4>$250</h4>
                 </div>
-                <div class="racket2">
-                    <img src="../images/ax88s_pro.webp" width="200px" height="auto">
-                    <ul>
-                        <li>
-                            Name: Astrox 88S Pro
-                        </li>
-                        <li>Flex: STIFF</li>
-                        <li>Length: 5mm longer</li>
-                        <li>Weight / Grip: <br>
-                            4U (Avg. 83g) G5, 6 <br>
-                            3U (Avg. 88g) G4, 5, 6
-                        </li>
-                        <li>Stringing Advice: <br>
-                            4U: 20 - 28 lbs <br>
-                            3U: 21 - 29 lbs
-                        </li>
-                        <li>Color(s): Emerald Blue</li>
-                        <li>Made In Japan</li>
-                    </ul>
+                <div class="astrox88SPro">
+                    <img src="../images/ax88s_pro.webp" width="200px" height="300px">
+                    <h3>Astrox 88S Pro</h3>
+                    <h4>$250</h4>
                 </div>
-                <div class="racket3">
-                    <img src="../images/ax77_pro.webp" width="200px" height="auto">
-                    <ul>
-                        <li>
-                            Name: Astrox 77 Pro
-                        </li>
-                        <li>Flex: Medium</li>
-                        <li>Length: 10mm longer</li>
-                        <li>Weight / Grip: <br>
-                            4U (Avg. 83g) G5, 6 <br>
-                            3U (Avg. 88g) G4, 5, 6
-                        </li>
-                        <li>Stringing Advice: <br>
-                            4U: 19 - 27 lbs <br>
-                            3U: 20 - 28 lbs
-                        </li>
-                        <li>Recommended String	<br>
-                            Control Players: AEROBITE <br>
-                            Hard Hitters: EXBOLT65</li>
-                        <li>Color(s): High orange</li>
-                        <li>Made In Japan</li>
-                    </ul>
+                <div class="astrox77Pro">
+                    <img src="../images/ax77_pro.webp" width="200px" height="300px">
+                    <h3>Astrox 77 Pro</h3>
+                    <h4>$225</h4>
                 </div>
-                <div class="racket4">
-                    <img src="../images/ax99_pro_whitetiger.webp" width="200px" height="auto">
-                    <ul>
-                        <li>
-                            Name: Astrox 99 Pro
-                        </li>
-                        <li>Flex: STIFF</li>
-                        <li>Length: 10mm longer</li>
-                        <li>Weight / Grip: <br>
-                            4U (Avg. 83g) G5, 6 <br>
-                            3U (Avg. 88g) G4, 5, 6
-                        </li>
-                        <li>Stringing Advice: <br>
-                            4U: 20 - 28 lbs <br>
-                            3U: 21 - 29 lbs
-                        </li>
-                        <li>
-                            Recommended String	<br>
-                            Control Players: AEROBITE <br>
-                            Hard Hitters: BG66 FORCE
-                        </li>
-                        <li>Color(s): White Tiger, Cherry Sunburst</li>
-                        <li>Made In Japan</li>
-                    </ul>
+                <div class="astrox99Pro">
+                    <img src="../images/ax99_pro_whitetiger.webp" width="200px" height="300px">
+                    <h3>Astrox 99 Pro</h3>
+                    <h4>$250</h4>
                 </div>
-                
-              </div>
             </div>
-          </div>
-          <div class="nanoflare">
-            <div class="dropdown">
-              <button class="dropbtn nanoflare_banner">Nanoflare</button>
-              <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-              </div>
+            <div class="nanoflare">
+                <h3>Nanoflare</h3>
+                <div class="nanoflare1000z">
+                    <img src="../images/nanoflare_1000_z.webp" width="200px" height="300px">
+                    <h3>Nanoflare 1000z</h3>
+                    <h4>$260</h4>
+                </div>
+                <div class="nanoflare800">
+                    <img src="../images/nanoflare_800.webp" width="200px" height="300px">
+                    <h3>Nanoflare 800</h3>
+                    <h4>$250</h4>
+
+                </div>
+                <div class="nanoflare700">
+                    <img src="../images/nanoflare_700.webp" width="200px" height="300px">
+                    <h3>Nanoflare 700</h3>
+                    <h4>$230</h4>
+                </div>
             </div>
-          </div>
-          <div class="duora">
-            <div class="dropdown">
-              <button class="dropbtn duora_banner">Duora</button>
-              <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-              </div>
+            <div class="duora">
+                <h3>Duora</h3>
+                <div class="duora_z_strike">
+                    <img src="../images/duora_z_strike.webp" width="200px" height="300px">
+                    <h3>Duora Z Strike</h3>
+                    <h4>$250</h4>
+                </div>
             </div>
-          </div>
-          <div class="arcsaber">
-            <div class="dropdown">
-              <button class="dropbtn arcsaber_banner">Arcsaber</button>
-              <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-              </div>
+            <div class="arcsaber">
+                <h3>Arcsaber</h3>
+                <div class="arcsaber11pro">
+                    <img src="../images/arcsaber11_pro.webp" width="200px" height="300px">
+                    <h3>Arcsaber 11 Pro</h3>
+                    <h4>$245</h4>
+                </div>
+                <div class="arcsaber7pro">
+                    <img src="../images/arcsaber7_pro.webp" width="200px" height="300px">
+                    <h3>Arcsaber 7 Pro</h3>
+                    <h4>$220</h4>
+                </div>
             </div>
-          </div>
         </div>
       </div>
 
       <div class="sec4">
         <div class="shoes_section">
           <h1>Shoes</h1>
-          <hr style="color: darkorange" />
+          <hr/>
         </div>
+
+        <div class="yonex_shoes">
+            <div class="aerus">
+                <h3>Aerus</h3>
+                <div class="astrox88DPro">
+                    <img src="../images/ax88d_pro.webp" width="200px" height="300px">
+                    <h3>Astrox 88D Pro</h3>
+                    <h4>$250</h4>
+                </div>
+                <div class="astrox88SPro">
+                    <img src="../images/ax88s_pro.webp" width="200px" height="300px">
+                    <h3>Astrox 88S Pro</h3>
+                    <h4>$250</h4>
+                </div>
+                <div class="astrox77Pro">
+                    <img src="../images/ax77_pro.webp" width="200px" height="300px">
+                    <h3>Astrox 77 Pro</h3>
+                    <h4>$225</h4>
+                </div>
+                <div class="astrox99Pro">
+                    <img src="../images/ax99_pro_whitetiger.webp" width="200px" height="300px">
+                    <h3>Astrox 99 Pro</h3>
+                    <h4>$250</h4>
+                </div>
+            </div>
+        </div>
+
+        
         <div class="yonex_shoes">
           <div class="aerus">
             <div class="dropdown">
