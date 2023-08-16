@@ -70,7 +70,9 @@
     .astrox,
     .nanoflare,
     .duora,
-    .arcsaber{
+    .arcsaber,
+    .aerus,
+    .eclipsion{
         display: flex;
         align-items: center;
         justify-content: space-evenly;
@@ -95,6 +97,11 @@
         gap:100px;
     }
 
+    .eclipsion{
+        justify-content: flex-start;
+        flex: 0 0 1275px;
+        gap: 90px;
+    }
     .rackets,
     .yonex_shoes {
       display: flex;
@@ -129,9 +136,9 @@
       text-align: center;
     }
 
-    #order{
+    .order{
         text-align: center;
-        font-size: 20px;
+        font-size: 40px;
     }
   </style>
   <body class="hide_scrollbar">
@@ -249,57 +256,57 @@
         <div class="yonex_shoes">
             <div class="aerus">
                 <h3>Aerus</h3>
-                <div class="astrox88DPro">
-                    <img src="../images/ax88d_pro.webp" width="200px" height="300px">
-                    <h3>Astrox 88D Pro</h3>
-                    <h4>$250</h4>
+                <div class="aerus_orange">
+                    <img src="../images/aerus_orange.webp" width="200px" height="200px">
+                    <h3>Orange</h3>
+                    <h4>$145</h4>
                 </div>
-                <div class="astrox88SPro">
-                    <img src="../images/ax88s_pro.webp" width="200px" height="300px">
-                    <h3>Astrox 88S Pro</h3>
-                    <h4>$250</h4>
+                <div class="aerus_blue_gray">
+                    <img src="../images/aerus_blue_gray.webp" width="200px" height="200px">
+                    <h3>Blue Gray</h3>
+                    <h4>$145</h4>
                 </div>
-                <div class="astrox77Pro">
-                    <img src="../images/ax77_pro.webp" width="200px" height="300px">
-                    <h3>Astrox 77 Pro</h3>
-                    <h4>$225</h4>
+                <div class="aerus_coral">
+                    <img src="../images/aerus_coral.webp" width="200px" height="200px">
+                    <h3>Coral</h3>
+                    <h4>$145</h4>
                 </div>
-                <div class="astrox99Pro">
-                    <img src="../images/ax99_pro_whitetiger.webp" width="200px" height="300px">
-                    <h3>Astrox 99 Pro</h3>
-                    <h4>$250</h4>
+                <div class="aerus_dark_gray">
+                    <img src="../images/aerus_dark_gray.webp" width="200px" height="200px">
+                    <h3>Dark Gray</h3>
+                    <h4>$140</h4>
+                </div>
+            </div>
+
+            <div class="eclipsion">
+                <h3>Eclipsion</h3>
+                <div class="eclipsion_white_black">
+                    <img src="../images/eclipsion_white.jpeg" width="200px" height="200px">
+                    <h3>White</h3>
+                    <h4>$145</h4>
+                </div>
+                <div class="eclipsion_black_red">
+                    <img src="../images/eclipsion_black_red.webp" width="200px" height="200px">
+                    <h3>Black and Red</h3>
+                    <h4>$145</h4>
+                </div>
+                <div class="eclipsion_blue">
+                    <img src="../images/eclipsion_blue.webp" width="200px" height="200px">
+                    <h3>Blue</h3>
+                    <h4>$145</h4>
+                </div>
+                <div class="eclipsion_yellow">
+                    <img src="../images/eclipsion_yellow.webp" width="200px" height="200px">
+                    <h3>Yellow</h3>
+                    <h4>$140</h4>
                 </div>
             </div>
         </div>
-
-        
-        <div class="yonex_shoes">
-          <div class="aerus">
-            <div class="dropdown">
-              <button class="dropbtn aerus_banner">Aerus</button>
-              <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-              </div>
-            </div>
-          </div>
-          <div class="eclipsion">
-            <div class="dropdown">
-              <button class="dropbtn eclipsion_banner">Eclipsion</button>
-              <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-              </div>
-            </div>
-          </div>
+    
+        <div class="order">
+            <hr>
+            <a href="/orderForm">Order Now</a>
         </div>
-
-        
-        <p id="order">
-          <a href="/orderForm">Order Now</a>
-        </p>
       </div>
 
       <div class="footer">
