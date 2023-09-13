@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Order Form</title>
+
+    <style>
+      .hide_scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      body {
+        padding: 0px;
+        margin: 0px;
+        background-color: wheat;
+      }
+      .hide_scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .sections {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 5px;
+      }
+
+      .title {
+        font-size: 60px;
+        text-align: center;
+        flex-grow: 1;
+        padding-right: 130px;
+      }
+
+      .no_underline {
+        text-decoration: none;
+      }
+
+      a {
+        color: black;
+      }
+
+      .blue-background {
+        background-color: #1f2937;
+      }
+
+      .sec2{
+        padding: 10px;
+      }
+      legend {
+        color: wheat;
+        padding: 5px 10px;
+      }
+
+      label {
+        color: wheat;
+      }
+      .sec2 h1{
+        text-align: center;
+        color: wheat;
+      }
+    </style>
+  </head>
+
+  <script>
+    function userConfirm(form) {
+      return window.confirm(
+        "Are you sure you want to submit your application? \nYou will not be able to change your information once submitted."
+      );
+    }
+  </script>
+
+  <body class="hide_scrollbar">
+    <div class="section">
+      <div class="sec1">
+        <div class="header">
+          <div class="logo">
+            <a
+              href="https://umdclubbadminton.weebly.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="../images/umd_club_badminton_logo-removebg-preview.png"
+                alt="umd_club_badminton_logo"
+                height="120px"
+                width="auto"
+              />
+            </a>
+          </div>
+          <div class="title">
+            <a class="no_underline" href="../html_webpages/index.html">
+              Terps Badminton
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec2 blue-background">
+        <h1>Order Form</h1>
+        <form
+          action="http://localhost:<%- portNum %>/orderFormData"
+          method="post"
+          onsubmit="userConfirm(this)"
+        >
+          <fieldset>
+            <fieldset>
+              <legend>Personal Information</legend>
+              <label>Name: <input type="text" name="name" /></label>
+              <label>ID: <input type="text" name="ID" /></label>
+            </fieldset>
+
+            <br />
+
+            <fieldset>
+              <legend>Contact Information</legend>
+              <label>Phone Number: </label>
+              <input type="number" id="first_three_digit" maxlength="3"/>
+              <input type="number" id="middle_three_digit" maxlength="3" />
+              <input type="number" id="last_four_digit" maxlength="4"/>
+              <label>Email Address: </label>
+              <input type="email" name="email" /></label>
+            </fieldset>
+
+            <fieldset>
+              <legend>Delivery Method</legend>
+              <input name="ship" id="ship" type="radio" value="ship" />
+              Ship &nbsp;&nbsp;&nbsp;&nbsp;
+              <label
+                >Shipping Address:
+                <input type="text" name="shippingAddress" size="100"
+              /></label>
+              <hr />
+              <input name="pickUp" id="pickUp" type="radio" value="pickUp" />
+              Pick Up &nbsp;&nbsp;&nbsp;&nbsp; Please come to stamp to pick up.
+              &nbsp; Address: 3972 Campus Dr, College Park, MD 20742
+            </fieldset>
+
+            <br />
+            <br />
+            <fieldset>
+              <legend>Choose A Gear Bundle</legend>
+
+              <input
+                name="beginnerGearBundle"
+                id="beginener"
+                type="radio"
+                value="beginner"
+              />
+              Beginner
+
+              <div class="row">
+                <div class="column">
+                  <img
+                    src="/public/beginnerBag.jpg"
+                    width="250"
+                    height="250"
+                    alt="beginner's bag"
+                  />
+                </div>
+                <div class="column">
+                  <img
+                    src="/public/beginnerRacket.webp"
+                    width="250"
+                    height="250"
+                    alt="beginner's racket"
+                  />
+                </div>
+                <div class="column">
+                  <img
+                    src="/public/beginnerShoes.webp"
+                    width="250"
+                    height="250"
+                    alt="beginner's shoes"
+                  />
+                </div>
+                <div class="column">
+                  <ul id="beginnerList">
+                    <li>Bag: $50</li>
+                    <li>Racket: $100</li>
+                    <li>Shoes: $60</li>
+                    <li>Total: $210</li>
+                  </ul>
+                </div>
+              </div>
+
+              <br />
+              <input
+                name="advanceGearBundle"
+                id="advance"
+                type="radio"
+                value="advance"
+              />
+              Advance
+
+              <div class="row">
+                <div class="column">
+                  <img
+                    src="/public/advanceBag.webp"
+                    width="250"
+                    height="250"
+                    alt="advance's bag"
+                  />
+                </div>
+                <div class="column">
+                  <img
+                    src="/public/advanceRacket.webp"
+                    width="250"
+                    height="250"
+                    alt="advance's racket"
+                  />
+                </div>
+                <div class="column">
+                  <img
+                    src="/public/advanceShoes.webp"
+                    width="250"
+                    height="250"
+                    alt="advance's shoes"
+                  />
+                </div>
+                <div class="column">
+                  <ul id="advanceList">
+                    <li>Bag: $150</li>
+                    <li>Racket: $250</li>
+                    <li>Shoes: $115</li>
+                    <li>Total: $515</li>
+                  </ul>
+                </div>
+              </div>
+            </fieldset>
+
+            <br />
+            <label
+              >Shipping Notes: <br />
+              <textarea rows="6" cols="70" name="shippingNotes"></textarea>
+            </label>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+
+    <h1>Order Form</h1>
+    <form
+      action="http://localhost:<%- portNum %>/orderFormData"
+      method="post"
+      onsubmit="userConfirm(this);"
+    >
+      <!-- <fieldset>
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label>Name: <input type="text" name="name" /></label>
+          <label>ID: <input type="text" name="ID" /></label>
+        </fieldset>
+
+        <br />
+
+        <fieldset>
+          <legend>Contact Information</legend>
+          <label>Email Address: <input type="email" name="email" /></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Delivery Method</legend>
+          <input name="ship" id="ship" type="radio" value="ship" />
+          Ship &nbsp;&nbsp;&nbsp;&nbsp;
+          <label
+            >Shipping Address:
+            <input type="text" name="shippingAddress" size="100"
+          /></label>
+          <hr />
+          <input name="pickUp" id="pickUp" type="radio" value="pickUp" />
+          Pick Up &nbsp;&nbsp;&nbsp;&nbsp; Please come to stamp to pick up.
+          &nbsp; Address: 3972 Campus Dr, College Park, MD 20742
+        </fieldset>
+
+        <br />
+        <br />
+        <fieldset>
+          <legend>Choose A Gear Bundle</legend>
+
+          <input
+            name="beginnerGearBundle"
+            id="beginener"
+            type="radio"
+            value="beginner"
+          />
+          Beginner
+
+          <div class="row">
+            <div class="column">
+              <img
+                src="/public/beginnerBag.jpg"
+                width="250"
+                height="250"
+                alt="beginner's bag"
+              />
+            </div>
+            <div class="column">
+              <img
+                src="/public/beginnerRacket.webp"
+                width="250"
+                height="250"
+                alt="beginner's racket"
+              />
+            </div>
+            <div class="column">
+              <img
+                src="/public/beginnerShoes.webp"
+                width="250"
+                height="250"
+                alt="beginner's shoes"
+              />
+            </div>
+            <div class="column">
+              <ul id="beginnerList">
+                <li>Bag: $50</li>
+                <li>Racket: $100</li>
+                <li>Shoes: $60</li>
+                <li>Total: $210</li>
+              </ul>
+            </div>
+          </div>
+
+          <br />
+          <input
+            name="advanceGearBundle"
+            id="advance"
+            type="radio"
+            value="advance"
+          />
+          Advance
+
+          <div class="row">
+            <div class="column">
+              <img
+                src="/public/advanceBag.webp"
+                width="250"
+                height="250"
+                alt="advance's bag"
+              />
+            </div>
+            <div class="column">
+              <img
+                src="/public/advanceRacket.webp"
+                width="250"
+                height="250"
+                alt="advance's racket"
+              />
+            </div>
+            <div class="column">
+              <img
+                src="/public/advanceShoes.webp"
+                width="250"
+                height="250"
+                alt="advance's shoes"
+              />
+            </div>
+            <div class="column">
+              <ul id="advanceList">
+                <li>Bag: $150</li>
+                <li>Racket: $250</li>
+                <li>Shoes: $115</li>
+                <li>Total: $515</li>
+              </ul>
+            </div>
+          </div>
+        </fieldset>
+
+        <br />
+        <label
+          >Shipping Notes: <br />
+          <textarea rows="6" cols="70" name="shippingNotes"></textarea>
+        </label>
+      </fieldset> -->
+      <br />
+
+      <div id="resetAndSubmit">
+        <input type="reset" />
+        <input type="submit" value="Submit Order" />
+      </div>
+    </form>
+    <hr />
+    <a href="http://localhost:<%- portNum%>/">HOME</a>
+  </body>
+</html>
