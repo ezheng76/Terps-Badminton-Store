@@ -43,6 +43,10 @@ app.get("/", (req, res) => {
     res.render("index")
 })
 
+app.get("/yonex_page", (req, res) => {
+    res.render("yonex_page", {portNum: portNum});
+  });
+
 // ^^^^^^^^MAIN FUNCTION^^^^^^^^
 
 async function insert(information){
@@ -58,9 +62,6 @@ async function insert(information){
         await client.close();
     }
 }
-app.get("/yonex_page", (req, res) => {
-    res.render("yonex_page", {portNum: portNum});
-  });
 
   
 // app.post("/orderFormData", async (req, res) => {
