@@ -58,10 +58,10 @@ async function insert(information){
         await client.close();
     }
 }
+app.get("/yonex_page", (req, res) => {
+    res.render("yonex_page", {portNum: portNum});
+  });
 
-app.get("/order_form", (req, res) => {
-    res.render("order_form", {portNum: portNum});
-});
   
 // app.post("/orderFormData", async (req, res) => {
 //     let {name, ID, email, shippingNotes} = req.body;
