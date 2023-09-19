@@ -8,7 +8,7 @@ let portNum = process.argv[2];
 app.set("views", path.resolve(__dirname,"html_webpages"));
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: false}));
-app.use('/public/',express.static('./public/'));
+app.use('/images/',express.static('./images/'));
 
 http.createServer(app).listen(portNum);
 
@@ -23,11 +23,12 @@ const dataBaseAndCollection = {db: process.env.MONGO_DB_NAME, collection: proces
 const {MongoClient, ServerApiVersion} = require('mongodb');
 const { response } = require("express");
 
+
 async function main(){
   
     const uri = `mongodb+srv://${userName}:${password}@cluster0.wwfzi7q.mongodb.net/?retryWrites=true&w=majority`;
     const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-  
+    
     try{
       await client.connect();
     } catch (e) {
@@ -92,4 +93,25 @@ app.get("/order_form", (req, res) => {
   
 //     res.render("orderFormData", variables);
 //   });
+
+console.log(`Web server started and running at http://localhost:${portNum}`);
+process.stdout.write("Type stop to shutdown the server: ");
+
+process.stdin.on("readable", function(){
+    let userInput = process.stdin.read();
+
+    if (userInput != null){
+        if (userInput === "stop\n") {
+            process.stdout.write("Shutting down the server\n");
+            process.exit(0);
+        }
+        else {
+            process.stdout.write(`Invalid command: ${userInput}`);
+            process.stdout.write("Type stop to shutdown the server: ");
+            process.stdin.read();
+        }
+    }
+})
+
+main().catch(console.error);
   
