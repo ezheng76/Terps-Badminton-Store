@@ -47,6 +47,10 @@ app.get("/yonex_page", (req, res) => {
     res.render("yonex_page", {portNum: portNum});
   });
 
+app.get("/order_form", (req, res) => {
+    res.render("order_form", {portNum: portNum});
+});
+
 // ^^^^^^^^MAIN FUNCTION^^^^^^^^
 
 async function insert(information){
@@ -64,36 +68,26 @@ async function insert(information){
 }
 
   
-// app.post("/orderFormData", async (req, res) => {
-//     let {name, ID, email, shippingNotes} = req.body;
+app.post("/order_form_entry", async (req, res) => {
+    let {name, ID, email, notes} = req.body;
   
-//     let information = {
-//         name: name,
-//         ID:ID,
-//         email: email,
-//         pickUp:pickUp,
-//         ship:ship,
-//         shippingAddress: shippingAddress,
-//         gearSelection: gearSelection,
-//         shippingNotes: shippingNotes,
-//         total: total
-//     };
-//     await insert(information);
-//     let variables = {
-//         name: name,
-//         ID:ID,
-//         pickUp:pickUp,
-//         ship:ship,
-//         email: email,
-//         shippingAddress: shippingAddress,
-//         gearSelection: gearSelection,
-//         shippingNotes: shippingNotes,
-//         total:total,
-//         portNum: portNum
-//     };
+    let information = {
+        name: name,
+        ID:ID,
+        email: email,
+        notes: notes
+    };
+    await insert(information);
+    let variables = {
+        name: name,
+        ID:ID,
+        email: email,
+        notes: notes,
+        portNum: portNum
+    };
   
-//     res.render("orderFormData", variables);
-//   });
+    res.render("order_form_entry", variables);
+  });
 
 console.log(`Web server started and running at http://localhost:${portNum}`);
 process.stdout.write("Type stop to shutdown the server: ");

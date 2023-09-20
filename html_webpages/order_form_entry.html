@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Order Confirmation</title>
+
+    <style>
+        .hide_scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      body {
+        padding: 0px;
+        margin: 0px;
+        background-color: wheat;
+      }
+      .hide_scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .sections {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 5px;
+      }
+
+      .title {
+        font-size: 60px;
+        text-align: center;
+        flex-grow: 1;
+        padding-right: 130px;
+      }
+
+      .no_underline {
+        text-decoration: none;
+      }
+
+      a {
+        color: black;
+      }
+
+      .blue-background {
+        background-color: #1f2937;
+      }
+
+      .sec2{
+        padding: 10px;
+      }
+      
+      .sec2 h1{
+        text-align: center;
+        color: wheat;
+      }
+
+      .orderDetails{
+        color: wheat;
+        font-size:x-large;
+      }
+      .footer {
+      text-align: center;
+    }
+    </style>
+</head>
+
+<body class="hide_scrollbar">
+
+  <div class="section">
+    <div class="sec1">
+      <div class="header">
+        <div class="logo">
+          <a
+            href="https://umdclubbadminton.weebly.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="../images/umd_club_badminton_logo-removebg-preview.png"
+              alt="umd_club_badminton_logo"
+              height="120px"
+              width="auto"
+            />
+          </a>
+        </div>
+        <div class="title">
+          <a class="no_underline" href="../html_webpages/index.html">
+            Terps Badminton
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="sec2 blue-background">
+      <h1>Order Details</h1>
+      <hr>
+      <div class="orderDetails">
+        <strong>Name: </strong><%- name %><br>
+		    <strong>Email Address: </strong><%- email %><br>
+
+        <strong>Notes: </strong> <%- notes %><br>
+
+        <hr>
+        <div id = "center">
+            <strong>Order Submitted!!</strong>
+        </div>
+		
+        <div id = "center">
+            <a href="http://localhost:<%- portNum%>/">HOME</a>
+        </div>
+      </div>
+    </div>
+  </div>
+	
+</body>
+
+</html>
