@@ -69,11 +69,14 @@ async function insert(information){
 
   
 app.post("/order_form_entry", async (req, res) => {
-    let {name, ID, email, notes} = req.body;
+    let {name, ID, first_three_digit, second_three_digit, last_four_digit, email, notes} = req.body;
   
+    const phoneNumber = first_three_digit + second_three_digit + last_four_digit;
+
     let information = {
         name: name,
         ID:ID,
+        phoneNumber: phoneNumber,
         email: email,
         notes: notes
     };
@@ -81,6 +84,7 @@ app.post("/order_form_entry", async (req, res) => {
     let variables = {
         name: name,
         ID:ID,
+        phoneNumber: phoneNumber,
         email: email,
         notes: notes,
         portNum: portNum
