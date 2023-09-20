@@ -14,6 +14,7 @@
         padding: 0px;
         margin: 0px;
         background-color: wheat;
+        
       }
       .hide_scrollbar::-webkit-scrollbar {
         display: none;
@@ -62,7 +63,14 @@
         color: wheat;
         font-size:x-large;
       }
-      .footer {
+    .footer {
+      
+      position: absolute;
+      bottom: 0px;
+      left:48%;
+    }
+
+    .center{
       text-align: center;
     }
     </style>
@@ -105,15 +113,32 @@
         <strong>Notes: </strong> <%- notes %><br>
 
         <hr>
-        <div id = "center">
+        <div class = "center">
             <strong>Order Submitted!!</strong>
         </div>
 		
-        <div id = "center">
+        <div class = "center">
             <a href="http://localhost:<%- portNum%>/">HOME</a>
         </div>
       </div>
     </div>
+
+    <div class="footer">
+      <div class="logo">
+        <a
+          href="https://umdclubbadminton.weebly.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="../images/umd_club_badminton_logo-removebg-preview.png"
+            alt="umd_club_badminton_logo"
+            height="90px"
+            width="auto"
+          />
+        </a>
+      </div>
+  </div>
   </div>
 	
 </body>
