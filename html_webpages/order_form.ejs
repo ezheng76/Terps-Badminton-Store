@@ -65,11 +65,8 @@
         color: wheat;
       }
     .footer {
-      
-      position: absolute;
+      text-align: center;
       bottom: 0px;
-      
-      left:48%;
       
     }
     </style>
@@ -131,64 +128,64 @@
             <fieldset class="contact_infomation">
               <legend>Contact Information</legend>
               <label>Phone Number: </label>
-              <input type="text" name="first_three_digit" maxlength="3" size="3" required/>
+              <input type="text" name="phone_number" maxlength="3" size="3" required/>
               <span style="color: wheat;"> - </span>
-              <input type="text" name="middle_three_digit" maxlength="3" size="3" required/>
+              <input type="text" name="phone_number" maxlength="3" size="3" required/>
               <span style="color: wheat;"> - </span>
-              <input type="text" name="last_four_digit" maxlength="4" size="4" required/>
+              <input type="text" name="phone_number" maxlength="4" size="4" required/>
               &nbsp;
               <label>Email Address: </label>
               <input type="email" name="email" size="30" required/></label>
             </fieldset>
 
             <br>
-            <!-- <fieldset class="order_items">
+            <fieldset class="order_items">
                 <legend>Order</legend>
                 <fieldset class="yonex_items">
                     <legend>Yonex</legend>
                     <fieldset class="yonex_rackets"> 
                         <legend>Rackets</legend>
-                        <input type="checkbox" id="yonex_racket1" name="yonex_racket1" value="Astrox 88D Pro">
+                        <input type="checkbox" id="yonex_racket1" name="product" value="Astrox 88D Pro">
                         <label for="yonex_racket1"> Astrox 88D Pro</label> 
-                        <input type="checkbox" id="yonex_racket2" name="yonex_racket2" value="Astrox 88S Pro">
+                        <input type="checkbox" id="yonex_racket2" name="product" value="Astrox 88S Pro">
                         <label for="yonex_racket1"> Astrox 88S Pro</label> 
-                        <input type="checkbox" id="yonex_racket3" name="yonex_racket3" value="Astrox 99 Pro">
+                        <input type="checkbox" id="yonex_racket3" name="product" value="Astrox 99 Pro">
                         <label for="yonex_racket1"> Astrox 99 Pro</label> 
-                        <input type="checkbox" id="yonex_racket4" name="yonex_racket4" value="Nanoflare 1000 z">
+                        <input type="checkbox" id="yonex_racket4" name="product" value="Nanoflare 1000 z">
                         <label for="yonex_racket1"> Nanoflare 1000z</label> 
-                        <input type="checkbox" id="yonex_racket5" name="yonex_racket5" value="Nanoflare 800">
+                        <input type="checkbox" id="yonex_racket5" name="product" value="Nanoflare 800">
                         <label for="yonex_racket1"> Nanoflare 800</label> 
-                        <input type="checkbox" id="yonex_racket6" name="yonex_racket6" value="Nanoflare 700">
+                        <input type="checkbox" id="yonex_racket6" name="product" value="Nanoflare 700">
                         <label for="yonex_racket1"> Nanoflare 700</label> 
-                        <input type="checkbox" id="yonex_racket7" name="yonex_racket7" value="Duroa Z Strike">
+                        <input type="checkbox" id="yonex_racket7" name="product" value="Duroa Z Strike">
                         <label for="yonex_racket1"> Duroa Z Strike</label> 
-                        <input type="checkbox" id="yonex_racket8" name="yonex_racket8" value="Arcsaber 11 Pro">
+                        <input type="checkbox" id="yonex_racket8" name="product" value="Arcsaber 11 Pro">
                         <label for="yonex_racket1"> Arcsaber 11 Pro</label> 
-                        <input type="checkbox" id="yonex_racket9" name="yonex_racket9" value="Arcsaber 7 Pro">
+                        <input type="checkbox" id="yonex_racket9" name="product" value="Arcsaber 7 Pro">
                         <label for="yonex_racket1"> Arcsaber 7 Pro</label> 
                     </fieldset>
                     <fieldset class="yonex_rackets"> 
                         <legend>Shoes</legend>
-                        <input type="checkbox" id="yonex_shoe1" name="yonex_shoe1" value="Aerus Orange">
+                        <input type="checkbox" id="yonex_shoe1" name="product" value="Aerus Orange">
                         <label for="yonex_shoe1"> Aerus - Orange</label> 
-                        <input type="checkbox" id="yonex_shoe2" name="yonex_shoe2" value="Aerus Blue Gray">
+                        <input type="checkbox" id="yonex_shoe2" name="product" value="Aerus Blue Gray">
                         <label for="yonex_shoe1"> Aerus - Blue Gray</label> 
-                        <input type="checkbox" id="yonex_shoe3" name="yonex_shoe3" value="Aerus Coral">
+                        <input type="checkbox" id="yonex_shoe3" name="product" value="Aerus Coral">
                         <label for="yonex_shoe1"> Aerus - Coral</label> 
-                        <input type="checkbox" id="yonex_shoe4" name="yonex_shoe4" value="Aerus Dark Gray">
+                        <input type="checkbox" id="yonex_shoe4" name="product" value="Aerus Dark Gray">
                         <label for="yonex_shoe1"> Aerus - Dark Gray</label> 
-                        <input type="checkbox" id="yonex_shoe5" name="yonex_shoe5" value="Eclipsion White">
+                        <input type="checkbox" id="yonex_shoe5" name="product" value="Eclipsion White">
                         <label for="yonex_shoe1"> Eclipsion - White</label> 
-                        <input type="checkbox" id="yonex_shoe6" name="yonex_shoe6" value="Eclipsion Black Red">
+                        <input type="checkbox" id="yonex_shoe6" name="product" value="Eclipsion Black Red">
                         <label for="yonex_shoe1"> Eclipsion - Black and Red</label> 
-                        <input type="checkbox" id="yonex_shoe7" name="yonex_shoe7" value="Eclipsion Blue">
+                        <input type="checkbox" id="yonex_shoe7" name="product" value="Eclipsion Blue">
                         <label for="yonex_shoe1"> Eclipsion - Blue</label> 
-                        <input type="checkbox" id="yonex_shoe8" name="yonex_shoe8" value="Eclipsion Yellow">
+                        <input type="checkbox" id="yonex_shoe8" name="product" value="Eclipsion Yellow">
                         <label for="yonex_shoe1"> Eclipsion - Yellow</label> 
                     </fieldset>
                     
                 </fieldset>
-            </fieldset> -->
+            </fieldset>
 
             <br />
             <label>

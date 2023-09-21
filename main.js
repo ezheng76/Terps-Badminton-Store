@@ -67,31 +67,36 @@ async function insert(information){
     }
 }
 
-  
-app.post("/order_form_entry", async (req, res) => {
-    let {name, ID, first_three_digit, middle_three_digit, last_four_digit, email, notes} = req.body;
-  
-    const phoneNumber = first_three_digit + "-" + middle_three_digit + "-" + last_four_digit;
 
-    let information = {
-        name: name,
-        ID:ID,
-        phoneNumber: phoneNumber,
-        email: email,
-        notes: notes
-    };
-    await insert(information);
-    let variables = {
-        name: name,
-        ID:ID,
-        phoneNumber: phoneNumber,
-        email: email,
-        notes: notes,
-        portNum: portNum
-    };
-  
-    res.render("order_form_entry", variables);
+app.post("/order_form_entry", async (req, res) => {
+    const jsonData = req.body;
+    
+    var phoneNumber = "";
+    var result =  {};
+    var items = "";
+    
+    for(let i in jsonData) { 
+
+        if (i != "phone_number" && i != "product"){
+            result[i] = jsonData[i];
+        }else if (i = "phone_number"){ 
+            phoneNumber = jsonData[i][0] + "-" + jsonData[i][1] + "-" + jsonData[i][2];
+            result["phoneNumber"] = phoneNumber;
+        }else if (i = "product"){
+            for (j in jsonData[i]){
+                items = items + j;
+            }
+            result["items"] = items;
+        }
+     };
+
+    await insert(result);
+
+    result["portNum"] = portNum;
+    
+    res.render("order_form_entry", result);
   });
+
 
 console.log(`Web server started and running at http://localhost:${portNum}`);
 process.stdout.write("Type stop to shutdown the server: ");
