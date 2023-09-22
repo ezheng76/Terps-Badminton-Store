@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Removed</title>
+
+	<style>
+        .hide_scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      body {
+        padding: 0px;
+        margin: 0px;
+        background-color: wheat;
+      }
+      .hide_scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+
+      h1{
+        text-align: center;
+      }
+      a{
+        margin: 20px;
+      }
+    </style>
+</head>
+
+<body class="hide_scrollbar">
+	<h1>Removal of All Order</h1>
+    <a>All orders have been removed from the database. Number of applications removed: </a> <%- removedNumber %>
+
+    <br>
+	<br>
+	<a href="http://localhost:<%- portNum%>/">HOME</a>
+</body>
+
+</html>

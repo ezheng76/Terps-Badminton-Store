@@ -83,16 +83,19 @@ app.post("/order_form_entry", async (req, res) => {
     phoneNumber = jsonData["phone_number"][0] + "-" + jsonData["phone_number"][1] + "-" + jsonData["phone_number"][2];
     result["phoneNumber"] = phoneNumber;
 
-    if (result.hasOwnProperty('product')){
+    if (Array.isArray(jsonData["product"]) ){
         for (let j = 0; j < jsonData["product"].length; j++){
             if (j != jsonData["product"].length - 1){
-                items = items + jsonData["product"][j] + ", ";
+                items = items + jsonData["product"] + ", "
             }else{
                 items = items + jsonData["product"][j];
             }
             
         }
+    }else{
+        items = jsonData["product"];
     }
+    
     
     result["items"] = items;
     result["portNum"] = portNum;
