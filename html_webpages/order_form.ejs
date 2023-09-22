@@ -69,6 +69,9 @@
       bottom: 0px;
       
     }
+    .center{
+      text-align: center;
+    }
     </style>
   </head>
 
@@ -78,6 +81,11 @@
         "Are you sure you want to submit your application? \nYou will not be able to change your information once submitted."
       );
     }
+    function userConfirmDelete() {
+      return window.confirm(
+          "Are you sure you want to remove all applications?\n"
+      );
+  }
 
 
   </script>
@@ -206,7 +214,11 @@
       </div>
     </div>
 
-    
+    <div class="removeButton center">
+      <form action="http://localhost:<%- portNum%>/data_removed" method="post" onsubmit="userConfirmDelete()">
+        <input type="submit" value="Remove all orders" id="submit" />
+      </form>
+    </div>
     <div class="footer">
         <div class="logo">
           

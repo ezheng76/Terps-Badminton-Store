@@ -104,6 +104,27 @@ app.post("/order_form_entry", async (req, res) => {
   });
 
 
+async function remove() {
+    const uri = `mongodb+srv://${userName}:${password}@cluster0.wwfzi7q.mongodb.net/?retryWrites=true&w=majority`;
+    const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+  
+    try{
+        await client.connect();
+        const result = await client.db(dataBaseAndCollection.db).collection(dataBaseAndCollection.collection).deleteMany({});
+        return result.deletedCount;
+    } catch (e){
+        console.error(e);
+    } finally {
+        await client.close();
+    }
+}
+
+  app.post("/data_removed", async (req, res) => {
+    let removedNumber = await remove();
+    res.render("data_removed", {portNum: portNum, removedNumber: removedNumber});
+  });
+
+
 console.log(`Web server started and running at http://localhost:${portNum}`);
 process.stdout.write("Type stop to shutdown the server: ");
 

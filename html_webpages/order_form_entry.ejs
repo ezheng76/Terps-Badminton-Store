@@ -77,14 +77,6 @@
     </style>
 </head>
 
-<script>
-  function userConfirm() {
-      return window.confirm(
-          "Are you sure you want to remove all applications?\n"
-      );
-  }
-</script>
-
 <body class="hide_scrollbar">
 
   <div class="section">
@@ -130,11 +122,7 @@
             <strong>Order Submitted!!</strong>
         </div>
 
-        <div class="removeButton center">
-          <form action="http://localhost:<%- portNum%>/processRemove" method="post" onsubmit="userConfirm()">
-            <input type="submit" value="Remove all orders" id="submit" />
-          </form>
-        </div>
+      
         
         <div class = "center no_underline">
             <a href="http://localhost:<%- portNum%>/">HOME</a>
