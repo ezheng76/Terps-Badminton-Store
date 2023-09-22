@@ -76,46 +76,24 @@ app.post("/order_form_entry", async (req, res) => {
     var items = "";
     
     for(let i in jsonData) { 
-        // switch (i){
-        //     case (i = "phone_number"):
-        //         phoneNumber = jsonData[i][0] + "-" + jsonData[i][1] + "-" + jsonData[i][2];
-        //         result["phoneNumber"] = phoneNumber;
-        //     case (i = "product"):
-        //         for (let j = 0; j < jsonData[i].length; j++) {
-        //             items = items + jsonData[j];
-        //         }
-        //         result["items"] = items;
-        //     default:
-        //         result[i] = jsonData[i];
-        // }
-        // if (i != "phone_number" && i != "product"){
-        //     result[i] = jsonData[i];
-        // }else if  (i = "phone_number"){ 
-        //     phoneNumber = jsonData[i][0] + "-" + jsonData[i][1] + "-" + jsonData[i][2];
-        //     result["phoneNumber"] = phoneNumber;
-        // }else if (i = "product"){
-        //     for (let j = 0; j < jsonData[i].length; j++) {
-        //         items = items + jsonData[j];
-        //     }
-        //     result["items"] = items;
-        // }
         result[i] = jsonData[i];
-     };
+    };
 
-    
-    
     await insert(result);
     phoneNumber = jsonData["phone_number"][0] + "-" + jsonData["phone_number"][1] + "-" + jsonData["phone_number"][2];
     result["phoneNumber"] = phoneNumber;
 
-    for (let j = 0; j < jsonData["product"].length; j++){
-        if (j != jsonData["product"].length - 1){
-            items = items + jsonData["product"][j] + ", ";
-        }else{
-            items = items + jsonData["product"][j];
+    if (result.hasOwnProperty('product')){
+        for (let j = 0; j < jsonData["product"].length; j++){
+            if (j != jsonData["product"].length - 1){
+                items = items + jsonData["product"][j] + ", ";
+            }else{
+                items = items + jsonData["product"][j];
+            }
+            
         }
-        
     }
+    
     result["items"] = items;
     result["portNum"] = portNum;
     
