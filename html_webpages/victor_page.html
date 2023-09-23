@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Victor Products</title>
+  </head>
+  <style>
+    body {
+      padding: 0px;
+      margin: 0px;
+      background-color: wheat;
+    }
+    .hide_scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .hide_scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .sections {
+      display: flex;
+      flex-direction: column;
+    }
+    .blue-background {
+      background-color: #1f2937;
+    }
+    .header {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 5px;
+    }
+
+    .title {
+      font-size: 60px;
+      text-align: center;
+      flex-grow: 1;
+      padding-right: 90px;
+    }
+
+    .no_underline {
+      text-decoration: none;
+    }
+
+    a {
+      color: black;
+    }
+
+    .victor_banner {
+      background-image: url("../images/lee_zii_jia4.png");
+      height: 600px;
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+
+    .victor_title {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 100px;
+    }
+
+    .brave_sword,
+    .jet_speed_s,
+    .aura_speed,
+    .arcsaber,
+    .aerus,
+    .eclipsion{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 100px;
+    }
+
+    .brave_sword{
+        flex: 0 0 1275px;
+        gap: 115px;
+        justify-content:flex-start;
+    }
+    .jet_speed_s{
+        flex: 0 0 1275px;
+        gap: 95px;
+        justify-content:flex-start;
+    }
+
+    .aura_speed{
+        flex: 0 0 1275px;
+        gap: 120px;
+        justify-content:flex-start;
+    }
+
+    .eclipsion{
+        justify-content: flex-start;
+        flex: 0 0 1275px;
+        gap: 90px;
+    }
+    .rackets,
+    .yonex_shoes {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      
+    }
+
+    .astrox88DPro,
+    .astrox88SPro,
+    .astrox77Pro,
+    .astrox99Pro,
+    .nanoflare1000z,
+    .nanoflare800,
+    .nanoflare700,
+    .duora_z_strike,
+    .arcsaber11pro,
+    .arcsaber7pro{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .racket_section,
+    .shoes_section,
+    .bag_section {
+      padding: 25px;
+    }
+
+    .footer {
+      text-align: center;
+    }
+
+    .order{
+        text-align: center;
+        font-size: 40px;
+    }
+  </style>
+  <body class="hide_scrollbar">
+    <div class="sections">
+      <div class="sec1">
+        <div class="header">
+          <div class="logo">
+            <a
+              href="https://umdclubbadminton.weebly.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="../images/umd_club_badminton_logo-removebg-preview.png"
+                alt="umd_club_badminton_logo"
+                height="120px"
+                width="auto"
+              />
+            </a>
+          </div>
+          <div class="title">
+            <a class="no_underline" href="../html_webpages/index.html">
+              Terps Badminton
+            </a>
+          </div>
+          <div class="home">
+            <a href="http://localhost:<%- portNum%>/">HOME</a><br>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec2">
+        <div class="victor_banner">
+          <div class="victor_title">VICTOR</div>
+        </div>
+      </div>
+
+      <div class="sec3">
+        <div class="racket_section">
+          <h1>Rackets</h1>
+          <hr />
+        </div>
+
+        <div class="rackets">
+
+            <div class="astrox">
+                <h3>Astrox</h3>
+                <div class="astrox88DPro">
+                    <img src="../images/ax88d_pro.webp" width="200px" height="300px">
+                    <h3>Astrox 88D Pro</h3>
+                    <h4>$250</h4>
+                </div>
+                <div class="astrox88SPro">
+                    <img src="../images/ax88s_pro.webp" width="200px" height="300px">
+                    <h3>Astrox 88S Pro</h3>
+                    <h4>$250</h4>
+                </div>
+                <div class="astrox99Pro">
+                    <img src="../images/ax99_pro_whitetiger.webp" width="200px" height="300px">
+                    <h3>Astrox 99 Pro</h3>
+                    <h4>$250</h4>
+                </div>
+            </div>
+            <div class="nanoflare">
+                <h3>Nanoflare</h3>
+                <div class="nanoflare1000z">
+                    <img src="../images/nanoflare_1000_z.webp" width="200px" height="300px">
+                    <h3>Nanoflare 1000z</h3>
+                    <h4>$260</h4>
+                </div>
+                <div class="nanoflare800">
+                    <img src="../images/nanoflare_800.webp" width="200px" height="300px">
+                    <h3>Nanoflare 800</h3>
+                    <h4>$250</h4>
+
+                </div>
+                <div class="nanoflare700">
+                    <img src="../images/nanoflare_700.webp" width="200px" height="300px">
+                    <h3>Nanoflare 700</h3>
+                    <h4>$230</h4>
+                </div>
+            </div>
+            <div class="duora">
+                <h3>Duora</h3>
+                <div class="duora_z_strike">
+                    <img src="../images/duora_z_strike.webp" width="200px" height="300px">
+                    <h3>Duora Z Strike</h3>
+                    <h4>$250</h4>
+                </div>
+            </div>
+            <div class="arcsaber">
+                <h3>Arcsaber</h3>
+                <div class="arcsaber11pro">
+                    <img src="../images/arcsaber11_pro.webp" width="200px" height="300px">
+                    <h3>Arcsaber 11 Pro</h3>
+                    <h4>$245</h4>
+                </div>
+                <div class="arcsaber7pro">
+                    <img src="../images/arcsaber7_pro.webp" width="200px" height="300px">
+                    <h3>Arcsaber 7 Pro</h3>
+                    <h4>$220</h4>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="sec4">
+        <div class="shoes_section">
+          <h1>Shoes</h1>
+          <hr/>
+        </div>
+
+        <div class="yonex_shoes">
+            <div class="aerus">
+                <h3>Aerus</h3>
+                <div class="aerus_orange">
+                    <img src="../images/aerus_orange.png" width="200px" height="200px">
+                    <h3>Orange</h3>
+                    <h4>$145</h4>
+                </div>
+                <div class="aerus_blue_gray">
+                    <img src="../images/aerus_blue_gray.png" width="200px" height="200px">
+                    <h3>Blue Gray</h3>
+                    <h4>$145</h4>
+                </div>
+                <div class="aerus_coral">
+                    <img src="../images/aerus_coral.png" width="200px" height="200px">
+                    <h3>Coral</h3>
+                    <h4>$145</h4>
+                </div>
+                <div class="aerus_dark_gray">
+                    <img src="../images/aerus_dark_gray.png" width="200px" height="200px">
+                    <h3>Dark Gray</h3>
+                    <h4>$140</h4>
+                </div>
+            </div>
+
+            <div class="eclipsion">
+                <h3>Eclipsion</h3>
+                <div class="eclipsion_white_black">
+                    <img src="../images/eclipsion_white.png" width="200px" height="200px">
+                    <h3>White</h3>
+                    <h4>$120</h4>
+                </div>
+                <div class="eclipsion_black_red">
+                    <img src="../images/eclipsion_black_red.png" width="200px" height="200px">
+                    <h3>Black and Red</h3>
+                    <h4>$120</h4>
+                </div>
+                <div class="eclipsion_blue">
+                    <img src="../images/eclipsion_blue.png" width="200px" height="200px">
+                    <h3>Blue</h3>
+                    <h4>$150</h4>
+                </div>
+                <div class="eclipsion_yellow">
+                    <img src="../images/eclipsion_yellow.png" width="200px" height="200px">
+                    <h3>Yellow</h3>
+                    <h4>$120</h4>
+                </div>
+            </div>
+        </div>
+    
+        <div class="order no_underline">
+            <hr>
+            <a href="/order_form">Order Now</a>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="logo">
+          <a
+            href="https://umdclubbadminton.weebly.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="../images/umd_club_badminton_logo-removebg-preview.png"
+              alt="umd_club_badminton_logo"
+              height="90px"
+              width="auto"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
