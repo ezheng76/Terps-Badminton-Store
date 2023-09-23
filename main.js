@@ -47,6 +47,10 @@ app.get("/yonex_page", (req, res) => {
     res.render("yonex_page", {portNum: portNum});
   });
 
+app.get("/victor_page", (req, res) => {
+    res.render("victor_page", {portNum: portNum});
+});
+
 app.get("/order_form", (req, res) => {
     res.render("order_form", {portNum: portNum});
 });
@@ -85,12 +89,7 @@ app.post("/order_form_entry", async (req, res) => {
 
     if (Array.isArray(jsonData["product"]) ){
         for (let j = 0; j < jsonData["product"].length; j++){
-            if (j != jsonData["product"].length - 1){
-                items = items + jsonData["product"] + ", "
-            }else{
-                items = items + jsonData["product"][j];
-            }
-            
+            items = items + "[" + jsonData["product"][j] + "]";
         }
     }else{
         items = jsonData["product"];
