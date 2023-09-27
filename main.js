@@ -51,6 +51,10 @@ app.get("/victor_page", (req, res) => {
     res.render("victor_page", {portNum: portNum});
 });
 
+app.get("/lining_page", (req, res) => {
+    res.render("lining_page", {portNum: portNum});
+});
+
 app.get("/order_form", (req, res) => {
     res.render("order_form", {portNum: portNum});
 });
