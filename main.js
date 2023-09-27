@@ -129,7 +129,7 @@ async function remove() {
 
 
 console.log(`Web server started and running at http://localhost:${portNum}`);
-process.stdout.write("Type stop to shutdown the server: ");
+process.stdout.write("Type stop to shutdown the server: \n\n");
 
 process.stdin.on("readable", function(){
     let userInput = process.stdin.read();
@@ -141,7 +141,7 @@ process.stdin.on("readable", function(){
         }
         else {
             process.stdout.write(`Invalid command: ${userInput}`);
-            process.stdout.write("Type stop to shutdown the server: ");
+            process.stdout.write("Type stop to shutdown the server: \n");
             process.stdin.read();
         }
     }
